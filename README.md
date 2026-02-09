@@ -4,7 +4,7 @@ Curso de Programación 11º Colegio Científico de los Santos
 ---
 ## I Ciclo
 ### Material
-- [02 - Colas](i_ciclo/material/02.%20colas.md)
+- [02 - Pilas y Colas](i_ciclo/material/02.%20pila%20y%20colass.md)
 
 ### Ejercicios
-- [02 - Colas](i_ciclo/ejercicios/)
+- [02 - Pilas y Colas](i_ciclo/ejercicios/)
