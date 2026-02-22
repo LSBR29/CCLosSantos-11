@@ -114,7 +114,7 @@ Dada una cadena formada por letras minúsculas y el carácter `|`, procesarla co
 * Si al final de la cadena queda un bloque sin cerrar (sin `|` al final), también debe procesarse igual.
 * Imprimir todos los bloques invertidos
 
-*Resomendado usar la función para invertir del problema 2 de pilas*
+*Recomendado usar la función para invertir del problema 2 de pilas*
 
 **Salida esperada:**
 ```
@@ -124,3 +124,82 @@ cbaedhgf
 Ingrese cadena: aloh|odnum|nohtyp
 holamundopython
 ```
+
+### 2. Procesador Matemático
+Crear un sistema que reciba diferentes comandos e imprima el resultado al final:
+- `NUM x`: agrega un número a la expresión actual
+- `SUM`: suma los últimos dos números
+- `MUL`: multiplica los últimos dos números
+
+Cuando aparece `SUM` o `MUL`, se toman los últimos dos números, se opera y se vuelve a insertar el resultado a la expresión.
+*Recomendado manejar los comandos como una cola (procesarlos conforme llegan) y los números guardarlos en una pila*
+
+**Salida esperada:**
+```
+NUM 5
+NUM 3
+SUM
+NUM 2
+MUL
+
+RESULTADO: 16
+```
+
+### 3. Verificación de secuencia
+Dada una secuencia de números enteros, ingresados manualmente y separados por espacio en blanco, cree y utilice las siguientes estructuras para verificar si es posible reorganizarla para obtener la secuencia ordenada creciente (`1, 2, 3, ..., n`):
+* Una cola de entrada: Secuencia ingresada
+* Una pila auxiliar: Para guardar los números durante el intento de orden
+* Una cola de salida: Para ir ordenando los números
+
+Cumpliendo las siguientes reglas:
+Solo se puede:
+- Tomar el primer elemento de la cola de entrada.
+- Moverlo directamente a la cola de salida si es el siguiente número esperado.
+- O moverlo a la pila auxiliar para guardarlo.
+
+Desde la pila auxiliar solo se puede:
+- Sacar el elemento superior (último elemento) y enviarlo a la cola de salida si es el siguiente número esperado.
+
+**Salida esperada:**
+```
+Secuencia de entrada: 3 1 2
+Sí es posible ordenarla en [1, 2, 3]
+```
+
+**Proceso interno**
+Se convierte `3 1 2` en la cola de entrada:
+```
+Cola de entrada: [3, 1, 2]
+Pila auxiliar: []
+Cola de salida: []
+```
+
+Se toma el primer elemento y al ser un `3` se mueve a la pila auxiliar:
+```
+Cola de entrada: [1, 2]
+Pila auxiliar: [3]
+Cola de salida: []
+```
+
+Se toma el siguiente elemento de la entrada, y al ser un `1` se mueve a la cola de salida.
+```
+Cola de entrada: [2]
+Pila auxiliar: [3]
+Cola de salida: [1]
+```
+
+Como el `2` está en la entrada se toma y se mueve a la salida:
+```
+Cola de entrada: []
+Pila auxiliar: [3]
+Cola de salida: [1, 2]
+```
+
+Como el `3` está en la pila auxiliar se toma y se mueve a la salida:
+```
+Cola de entrada: []
+Pila auxiliar: []
+Cola de salida: [1, 2, 3]
+```
+
+Si es posible ordenar la secuencia.
