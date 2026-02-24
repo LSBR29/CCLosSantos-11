@@ -132,6 +132,7 @@ Crear un sistema que reciba diferentes comandos e imprima el resultado al final:
 - `MUL`: multiplica los últimos dos números
 
 Cuando aparece `SUM` o `MUL`, se toman los últimos dos números, se opera y se vuelve a insertar el resultado a la expresión.
+
 *Recomendado manejar los comandos como una cola (procesarlos conforme llegan) y los números guardarlos en una pila*
 
 **Salida esperada:**
@@ -152,6 +153,7 @@ Dada una secuencia de números enteros, ingresados manualmente y separados por e
 * Una cola de salida: Para ir ordenando los números
 
 Cumpliendo las siguientes reglas:
+
 Solo se puede:
 - Tomar el primer elemento de la cola de entrada.
 - Moverlo directamente a la cola de salida si es el siguiente número esperado.
