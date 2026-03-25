@@ -83,21 +83,7 @@ Comportamiento:
 [1, 1]
 ```
 
-Aquí tienes uno nuevo, manteniendo exactamente el estilo que estás usando:
-
 ---
-
-## **Árboles (recursión)**
-
-Puede asumir una estructura básica de un árbol como:
-
-```python
-class Nodo:
-    def __init__(self, valor):
-        self.valor = valor
-        self.izq = None
-        self.der = None
-```
 
 ### 4. Profundidad de un valor
 Implemente la función:
