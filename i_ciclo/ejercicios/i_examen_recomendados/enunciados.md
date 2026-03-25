@@ -103,11 +103,11 @@ Reglas:
 **Salida esperada:**
 ```
 Árbol:
-        10
-       /  \
-      5    15
-     / \
-    3   7
+    -> 15
+-> 10
+        -> 7
+    -> 5
+        -> 3
 
 Profundidad de 10: 0
 Profundidad de 7: 2
