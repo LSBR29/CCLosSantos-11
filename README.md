@@ -10,6 +10,7 @@ Curso de Programación 11º Colegio Científico de los Santos
 ### Ejercicios
 - [Pilas y Colas](i_ciclo/ejercicios/pilas_colas/)
 - [Árboles](i_ciclo/ejercicios/arboles/)
+- [I Exámen Recomendados](i_ciclo/ejercicios/i_examen_recomendados/)
 
 ### Tareas
 - [Tarea 1](i_ciclo/tareas/1/)
