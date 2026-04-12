@@ -15,9 +15,9 @@ def construir(comandos):
 
 def imprimirArbol(nodoActual, nivel=0):
     if nodoActual != None:
-        imprimirArbol(nodoActual.izq, nivel + 1)
-        print(' ' * 4 * nivel + '-> ' + str(nodoActual.valor))
         imprimirArbol(nodoActual.der, nivel + 1)
+        print(' ' * 4 * nivel + '-> ' + str(nodoActual.valor))
+        imprimirArbol(nodoActual.izq, nivel + 1)
 
 if __name__ == "__main__":
     comandos = [
