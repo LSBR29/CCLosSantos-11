@@ -19,10 +19,10 @@ def recomendar_amigos(grafo, usuario):
 
 if __name__ == "__main__":
     grafo = {
-        'A': ['B'],
-        'B': ['A', 'C', 'D'],
-        'C': ['B'],
-        'D': ['B']
+        'A': {'B'},
+        'B': {'A', 'C', 'D'},
+        'C': {'B'},
+        'D': {'B'}
     }
 
     recs = recomendar_amigos(grafo, 'A')
