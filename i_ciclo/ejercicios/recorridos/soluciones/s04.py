@@ -1,39 +1,33 @@
-def dfs(matriz, filas, columnas, x, y):
-    # Si está fuera de la matriz o es agua (0), se detiene
-    if x < 0 or x >= filas or y < 0 or y >= columnas or matriz[x][y] == 0:
-        return
+def conexiones(grafo, nodo):
+    visitados = []      # Al inicio se crea la lista de visitados vacía
+    cola = [nodo]       # Una cola para ir avanzando
+    distancias = {nodo: 0}
 
-    matriz[x][y] = 0   # Se marca como visitado "borrando" la tierra
+    while cola:     # Repetir hasta que se revisen todos los nodos
+        nodo = cola.pop(0)      # Se extrae el nodo a revisar de la cola
+        visitados.append(nodo)      # Se guarda como visitado
+        
+        for vecino in grafo[nodo]:       # Recorre cada vecino conectado al nodo actual
+            if vecino not in visitados:     # Solo encolan vecinos que no hayan sido visitados aún
+                cola.append(vecino)
+                distancias[vecino] = distancias[nodo] + 1       # La distancia de un vecino es la distancia del anterior + 1
 
-    # Se visitan las 4 direcciones posibles
-    dfs(matriz, filas, columnas, x, y-1)   # abajo
-    dfs(matriz, filas, columnas, x, y+1)   # arriba
-    dfs(matriz, filas, columnas, x+1, y)   # derecha
-    dfs(matriz, filas, columnas, x-1, y)   # izquierda
-
-
-def numero_islas(matriz):
-    contador = 0    # Cuenta cuántas islas se encuentran
-
-    # Dimensiones de la matriz
-    filas = len(matriz)
-    columnas = len(matriz[0])
-
-    for x in range(filas):
-        for y in range(columnas):
-
-            if matriz[x][y] == 1:       # Si encontramos tierra (1), es una nueva isla
-                dfs(matriz, filas, columnas, x, y)      # Se recorre y "elimina" toda la isla
-                contador += 1   # Se incrementa el número de islas
-
-    return contador
+    return distancias
 
 if __name__ == "__main__":
-    matriz = [
-        [1, 1, 0, 0],
-        [1, 0, 0, 1],
-        [0, 0, 1, 1],
-        [0, 0, 0, 0]
-    ]
+    """
+    A -- B -- C
+         |
+         D
+    """
+    grafo = {
+        'A': {'B'},
+        'B': {'A', 'C', 'D'},
+        'C': {'B'},
+        'D': {'B'}
+    }
 
-    print("Número de islas:", numero_islas(matriz))
+    inicial = "A"
+
+    print(f"Personas inicial: {inicial}")
+    print(f"Distancias: {conexiones(grafo, inicial)}")

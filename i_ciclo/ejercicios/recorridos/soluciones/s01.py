@@ -1,28 +1,29 @@
-def tiempo_propagacion(grafo, inicio):      # BFS
-    visitados = []      # Lista para no repetir nodos (personas ya infectadas)
+def alcanzables(grafo, nodo, visitados=None):
+    if visitados is None:       # Al inicio se crea la lista de visitados vacía
+        visitados = []
 
-    cola = [(inicio, 0)]        # Guarda (nodo, tiempo)
-    tiempo_max = 0      # Resultado
+    visitados.append(nodo)      # Marcar el nodo actual como visitado
 
-    while cola:
-        nodo, tiempo = cola.pop(0)
+    for vecino in grafo[nodo]:       # Recorre cada vecino conectado al nodo actual
+        if vecino not in visitados:     # Solo visita el vecino si no ha sido procesado antes
+            alcanzables(grafo, vecino, visitados)
 
-        if nodo not in visitados:
-            visitados.append(nodo)      # Ya visitado = infectado
-            tiempo_max = max(tiempo_max, tiempo)        # Se actualiza el tiempo
-
-            for vecino in grafo[nodo]:
-                if vecino not in visitados:
-                    cola.append((vecino, tiempo + 1))
-
-    return tiempo_max
+    return visitados
 
 if __name__ == "__main__":
+    """
+    A -- B      C -- D
+                |
+                E
+    """
     grafo = {
         'A': {'B'},
-        'B': {'A', 'C', 'D'},
-        'C': {'B'},
-        'D': {'B'}
+        'B': {'A'},
+        'C': {'D', 'E'},
+        'D': {'C'},
+        'E': {'C'}
     }
 
-    print(f"Tiempo total de propagación: {tiempo_propagacion(grafo, 'A')} minutos")
+    inicial = "A"
+    print(f"Computadora inicial: {inicial}")
+    print(f"Computadoras alcanzables: {alcanzables(grafo, inicial)}")

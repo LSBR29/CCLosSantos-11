@@ -1,94 +1,85 @@
 ## Ejercicios de Recorridos
-### 1. Tiempo de propagación
-Dado un **grafo no dirigido**, donde cada nodo representa una persona y cada arista representa contacto, cree una función que permita:
+### 1. Computadoras conectadas
 
-* Determinar cuánto tiempo tarda en propagarse una infección, asumiendo que:
-  * Un nodo infecta a todos sus vecinos en **1 minuto**.
+Dado un **grafo no dirigido**, donde cada nodo representa una computadora y cada arista representa conexión directa, cree una función que permita:
 
-La función debe recibir como parámetros el grafo y el nodo inicial.
+* Listar todas las computadoras alcanzables desde una computadora inicial.
+
+La función debe recibir como parámetros el grafo y la computadora inicial.
 
 **Salida esperada:**
+
 ```
 Grafo:
-A -- B -- D
+A -- B      C -- D
+             |
+             E
+
+Computadora inicial: A
+Computadoras alcanzables: ['A', 'B']
+```
+
+### 2. Rutas entre ciudades
+
+Dado un **grafo no dirigido**, donde cada nodo representa una ciudad y cada arista representa una carretera, cree una función que permita:
+
+* Encontrar **todas las rutas posibles** desde una ciudad inicial hasta una ciudad destino **sin repetir ciudades**.
+
+La función debe recibir como parámetros el grafo, la ciudad inicial y la ciudad destino.
+
+**Salida esperada:**
+
+```
+Grafo:
+A -- B -- C
+|    |
+D ----
+
+Ciudad inicial: A
+Ciudad destino: C
+Rutas posibles: [['A', 'D', 'B', 'C'], ['A', 'B', 'C']]
+```
+
+### 3. Estaciones eléctricas
+
+Dado un **grafo no dirigido**, donde cada nodo representa una estación eléctrica y cada arista representa una conexión, cree una función que permita:
+
+* Encontrar todos los caminos desde una estación inicial hasta una final cuya longitud (cantidad de nodos) sea exactamente ( k ).
+
+La función debe recibir como parámetros el grafo, la estación inicial, la estación final y el valor ( k ).
+
+**Salida esperada:**
+
+```
+Grafo:
+A -- B -- C
+|    |
+D ----
+
+Inicio: A
+Fin: C
+k: 3
+Caminos válidos: [['A', 'B', 'C']]
+```
+
+### 4. Conexión entre personas
+
+Dado un **grafo no dirigido**, donde cada nodo representa una persona y cada arista representa amistad, cree una función que permita:
+
+* Determinar la **distancia mínima (en número de conexiones)** desde una persona inicial hacia todas las demás.
+
+La función debe recibir como parámetros el grafo y la persona inicial.
+
+**Salida esperada:**
+
+```
+Grafo:
+A -- B -- C
      |
-     C
+     D
 
-Paciente cero: A
-Tiempo total de propagación: 2 minutos
-```
-
-### 2. Contar caminos
-Dado un **grafo no dirigido**, cree una función que permita:
-
-* Contar cuántos caminos distintos existen entre dos nodos, sin repetir nodos en un mismo camino.
-
-La función debe recibir como parámetros el grafo, el nodo origen y el nodo destino.
-
-**Salida esperada:**
-```
-Grafo:
-A -- B -- D
- \   |
-  \- C
-
-Origen: A
-Destino: D
-Cantidad de caminos: 2
-```
-
-### 3. Laberinto
-
-Dada una **matriz**, donde:
-
-* `0` representa un camino libre
-* `1` representa una pared
-
-Cree una función que permita:
-
-* Determinar si existe un camino desde una posición inicial (x1, y1) hasta una posición final (x2, y2).
-
-La función debe recibir como parámetros la matriz, la posición inicial y la posición final.
-
-**Salida esperada:**
-
-```
-Matriz:
-0 0 1
-1 0 1
-0 0 0
-
-Inicio X: 0
-Inicio Y: 0
-Fin X: 2
-Fin Y: 2
-Existe camino: True
-```
-
-### 4. Número de islas
-
-Dada una **matriz**, donde:
-
-* `1` representa tierra
-* `0` representa agua
-
-Cree una función que permita:
-
-* Determinar cuántas islas hay en la matriz.
-* Una isla está formada por celdas de tierra conectadas.
-
-La función debe recibir como parámetro la matriz.
-
-**Salida esperada:**
-
-```
-Matriz:
-1 1 0 0
-1 0 0 1
-0 0 1 1
-0 0 0 0
-
-Número de islas: 3
+Personas inicial: A
+Distancias: {'A': 0, 'B': 1, 'C': 2, 'D': 2}
 ```
 
 ### 5. Noticia
@@ -108,5 +99,24 @@ A -- B -- C
      D
 
 Persona inicial: A
-Orden de propagación: A, B, D, C   // A, B, C, D
+Orden de propagación: A, B, D, C  //  A, B, C, D
+```
+
+### 6. Número de islas
+
+Dado un **grafo no dirigido**, donde cada nodo representa una isla y cada arista representa que dos islas están conectadas, cree una función que permita:
+
+* Determinar cuántos grupos de islas conectadas existen.
+
+La función debe recibir como parámetro el grafo.
+
+**Salida esperada:**
+
+```
+Grafo:
+A -- B      C -- D
+             |
+             E
+
+Número de grupos: 2
 ```

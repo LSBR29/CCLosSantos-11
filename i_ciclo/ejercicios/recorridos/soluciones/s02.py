@@ -1,24 +1,39 @@
-def contar_caminos(grafo, actual, destino, visitados):      # DFS
-    if actual == destino:           # Caso base: al llegar al destino es un camino encontrado
-        return 1
+def encontrar(grafo, nodo, destino, visitados=None, rutas=None):
+    if visitados is None:       # Al inicio se crea la lista de visitados vacía
+        visitados = []
 
-    visitados.append(actual)
-    caminos = 0     # Contador de caminos desde este nodo hacia el destino
+    if rutas is None:           # Al inicio se crea una lista de rutas vacía
+        rutas = []
 
-    for vecino in grafo[actual]:
-        if vecino not in visitados:
-            caminos += contar_caminos(grafo, vecino, destino, visitados)    # Sumamos los caminos encontrados desde ese vecino
+    visitados.append(nodo)      # Marcar el nodo actual como visitado
 
-    visitados.pop()     # Se quita el nodo actual para permitir que se use en otros caminos diferentes
+    if nodo == destino:     # Caso base, si se llega al destino se guarda la ruta
+        rutas.append(visitados.copy())
+    else:
+        for vecino in grafo[nodo]:       # Recorre cada vecino conectado al nodo actual
+            if vecino not in visitados:     # Solo visita el vecino si no ha sido procesado antes
+                encontrar(grafo, vecino, destino, visitados, rutas)
 
-    return caminos
+    visitados.pop()     # Se elimina el nodo de la lista de visitados para permitir revisitarlo
+
+    return rutas
 
 if __name__ == "__main__":
+    """
+    A -- B -- C
+    |    |
+    D ----
+    """
     grafo = {
-        'A': {'B', 'C'},
+        'A': {'B', 'D'},
         'B': {'A', 'C', 'D'},
-        'C': {'A', 'B'},
-        'D': {'B'}
+        'C': {'B'},
+        'D': {'A', 'B'}
     }
 
-    print("Cantidad de caminos:", contar_caminos(grafo, 'A', 'D', []))
+    inicial = "A"
+    destino = "C"
+
+    print(f"Ciudad inicial: {inicial}")
+    print(f"Ciudad destino: {destino}")
+    print(f"Rutas posibles: {encontrar(grafo, inicial, destino)}")

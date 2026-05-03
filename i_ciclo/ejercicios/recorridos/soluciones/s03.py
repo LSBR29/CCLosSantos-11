@@ -1,44 +1,41 @@
-def hay_camino(matriz, x_ini, y_ini, x_fin, y_fin):     # BFS
-    visitados = []      # Lista de posiciones ya visitadas para no repetir
+def encontrarCondicionado(grafo, nodo, destino, k, visitados=None, rutas=None):
+    if visitados is None:       # Al inicio se crea la lista de visitados vacía
+        visitados = []
 
-    cola = [(x_ini, y_ini)]     # Cola de BFS con posiciones (x, y)
+    if rutas is None:           # Al inicio se crea una lista de rutas vacía
+        rutas = []
 
-    # Dimensiones de la matriz
-    filas = len(matriz)
-    columnas = len(matriz[0])
+    visitados.append(nodo)      # Marcar el nodo actual como visitado
 
-    while cola:
-        x, y = cola.pop(0) # Se extrae la primera posición
+    if nodo == destino and len(visitados) == k:     # Caso base, si se llega al destino y la ruta tiene el tamaño esperado
+        rutas.append(visitados.copy())              # se guarda
+    else:
+        for vecino in grafo[nodo]:       # Recorre cada vecino conectado al nodo actual
+            if vecino not in visitados:     # Solo visita el vecino si no ha sido procesado antes
+                encontrarCondicionado(grafo, vecino, destino, k, visitados, rutas)
 
-        # VALIDACIONES
-        if x < 0 or y < 0 or x >= filas or y >= columnas:
-            continue    # Si está fuera de la matriz, se ignora
+    visitados.pop()     # Se elimina el nodo de la lista de visitados para permitir revisitarlo
 
-        if matriz[x][y] == 1:
-            continue    # Si es una pared (1), no se puede pasar
-
-        if (x, y) in visitados:
-            continue    # Si ya fue visitado, se ignora para evitar ciclos
-
-        visitados.append((x, y))
-
-        # Si se llegó al final, hay camino
-        if x == x_fin and y == y_fin:
-            return True
-
-        # Nuevos caminos a revisar
-        cola.append((x, y-1))   # abajo
-        cola.append((x, y+1))   # arriba
-        cola.append((x+1, y))   # derecha
-        cola.append((x-1, y))   # izquierda
-
-    return False    # Si se vacía la cola y no se llegó al destino, no existe camino
+    return rutas
 
 if __name__ == "__main__":
-    matriz = [
-        [0, 0, 1],
-        [1, 0, 1],
-        [0, 0, 0]
-    ]
+    """
+    A -- B -- C
+    |    |
+    D ----
+    """
+    grafo = {
+        'A': {'B', 'D'},
+        'B': {'A', 'C', 'D'},
+        'C': {'B'},
+        'D': {'A', 'B'}
+    }
 
-    print("Existe camino:", hay_camino(matriz, 0, 0, 2, 2))
+    inicial = "A"
+    destino = "C"
+    k = 3
+
+    print(f"Inicio: {inicial}")
+    print(f"Fin: {destino}")
+    print(f"k: {k}")
+    print(f"Caminos válidos: {encontrarCondicionado(grafo, inicial, destino, k)}")
