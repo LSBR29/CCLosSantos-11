@@ -12,6 +12,11 @@ def nodo_mas_conectado(grafo):
     return max_nodo, max_grado    # Retornar ambas variables
 
 if __name__ == "__main__":
+    """
+    A -- B -- C
+    |    |
+    D    E
+    """
     grafo = {
         'A': {'B', 'D'},
         'B': {'A', 'C', 'E'},
@@ -22,5 +27,5 @@ if __name__ == "__main__":
 
     nodo, conexiones = nodo_mas_conectado(grafo)
 
-    print("Nodo más conectado:", nodo)
-    print("Cantidad de conexiones:", conexiones)
+    print(f"Nodo más conectado: {nodo}")
+    print(f"Cantidad de conexiones: {conexiones}")

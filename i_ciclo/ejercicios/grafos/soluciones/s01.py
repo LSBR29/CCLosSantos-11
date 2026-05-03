@@ -14,6 +14,11 @@ def estan_conectados(grafo, nodo1, nodo2):
     """
 
 if __name__ == "__main__":
+    """
+    A -- B
+    |    |
+    C    D
+    """
     grafo = {
         'A': {'B', 'C'},
         'B': {'A', 'D'},
@@ -21,5 +26,5 @@ if __name__ == "__main__":
         'D': {'B'}
     }
 
-    print("A - B:", estan_conectados(grafo, 'A', 'B'))
-    print("A - D:", estan_conectados(grafo, 'A', 'D'))
+    print(f"A - B: {estan_conectados(grafo, 'A', 'B')}")
+    print(f"A - D: {estan_conectados(grafo, 'A', 'D')}")

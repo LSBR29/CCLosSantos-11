@@ -41,27 +41,7 @@ Nodo más conectado: B
 Cantidad de conexiones: 3
 ```
 
-### 3. Red de infección
-
-Dado un **grafo no dirigido**, donde cada nodo representa una persona y cada arista representa contacto, cree una función que permita:
-
-* Determinar cuántas personas se infectan a partir de un **paciente cero**, asumiendo que el virus se propaga a todos los contactos posibles.
-
-La función debe recibir como parámetros el grafo y el nodo inicial (paciente cero).
-
-**Salida esperada:**
-
-```
-Grafo:
-A -- B -- D    F
-     |         |
-     C         E
-
-Paciente cero: B
-Personas infectadas: 4
-```
-
-### 4. Recomendación de amigos
+### 3. Recomendación de amigos
 
 Dado un **grafo no dirigido**, donde cada nodo representa un usuario y cada arista representa una amistad, cree una función que permita:
 
@@ -81,6 +61,28 @@ A -- B -- C
      D
 
 Usuario: A
-Amigos actuales: B
-Recomendaciones: C, D
+Amigos Actuales: {'B'}
+Recomendaciones: {'C', 'D'}
+```
+
+### 4. Peaje más caro
+
+Dado un grafo no dirigido con pesos, donde cada nodo representa una ciudad y cada arista representa una carretera con un costo asociado por peaje, cree una función que permita:
+
+Determinar cual es la conexión entre ciudades más cara.
+
+La función debe recibir como parámetro el grafo.
+
+**Salida esperada:**
+
+```
+Grafo:
+  A --(500)-- B
+  |           |
+(300)       (800)
+  |           |
+  C --(200)-- D
+
+Conexión más cara: B - D
+Costo: 800
 ```
