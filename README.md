@@ -7,6 +7,7 @@ Curso de Programación 11º Colegio Científico de los Santos
 - [01 - Pilas y Colas](i_ciclo/material/01.%20pilas%20y%20colas.md)
 - [02 - Árboles](i_ciclo/material/02.%20arboles.md)
 - [03 - Grafos](i_ciclo/material/03.%20grafos.md)
+- [04 - NumPy](i_ciclo/material/04.%20numpy.md)
 
 ### Ejercicios
 - [Pilas y Colas](i_ciclo/ejercicios/pilas_colas/)
