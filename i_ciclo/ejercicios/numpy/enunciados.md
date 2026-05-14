@@ -160,8 +160,11 @@ lanzamientos = np.array([1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1
 ```
 
 Con numpy:
+
 a) Cuente cuántas caras (1) hubo.
+
 b) Use `np.where()`, para cambiar todos los valores 1 por el string `"Cara"` y todos los 0 por `"Escudo"`.
+
 c) Muestre el array resultante.
 
 **Salida esperada:**
