@@ -175,3 +175,31 @@ Resultado del lanzamiento:
  'Cara' 'Cara' 'Escudo' 'Escudo' 'Cara' 'Escudo' 'Cara' 'Escudo' 'Cara'
  'Cara' 'Escudo']
 ```
+
+### 9. Explorar vecinos en una matriz
+
+Escriba un programa que:
+
+* Cree una matriz de `5 x 5` llena de ceros usando NumPy.
+* Coloque un `1` en la posición central `(2, 2)`.
+* Imprima los valores de los vecinos de la celda central.
+
+**Salida esperada:**
+```
+Matriz:
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 1. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+
+Vecinos:
+Vecino en (1, 1) = 0.0
+Vecino en (1, 2) = 0.0
+Vecino en (1, 3) = 0.0
+Vecino en (2, 1) = 0.0
+Vecino en (2, 3) = 0.0
+Vecino en (3, 1) = 0.0
+Vecino en (3, 2) = 0.0
+Vecino en (3, 3) = 0.0
+```
