@@ -8,6 +8,7 @@ Curso de Programación 11º Colegio Científico de los Santos
 - [02 - Árboles](i_ciclo/material/02.%20arboles.md)
 - [03 - Grafos](i_ciclo/material/03.%20grafos.md)
 - [04 - NumPy](i_ciclo/material/04.%20numpy.md)
+- [05 - MatPlotLib](i_ciclo/material/05.%20matplotlib.md)
 
 ### Ejercicios
 - [Pilas y Colas](i_ciclo/ejercicios/pilas_colas/)
@@ -15,10 +16,12 @@ Curso de Programación 11º Colegio Científico de los Santos
 - [Grafos](i_ciclo/ejercicios/grafos/)
 - [Recorridos](i_ciclo/ejercicios/recorridos/)
 - [NumPy](i_ciclo/ejercicios/numpy/)
+- [MatPlotLib](i_ciclo/ejercicios/matplotlib/)
 - [I Exámen Recomendados](i_ciclo/ejercicios/i_examen_recomendados/)
 
 ### Tareas
 - [Tarea 1](i_ciclo/tareas/1/)
+- [Tarea 2](i_ciclo/tareas/2/)
 
 ### Exámenes
 - [I Examen](i_ciclo/exámenes/1/)
