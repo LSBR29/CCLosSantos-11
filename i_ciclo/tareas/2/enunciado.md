@@ -18,22 +18,28 @@ Desarrolle un programa que utilice la siguiente lista de cantidades de puntos:
 
 Para cada valor `N` de la lista:
 
-1. Genere `N` valores aleatorios para `x`.
-2. Genere `N` valores aleatorios para `y`.
+1. Genere `N` valores aleatorios para `x` entre 0 y 1.
+2. Genere `N` valores aleatorios para `y` entre 0 y 1.
 3. Determine cuáles puntos cumplen:
 
-x^2+y^2\leq1
+<div align="center">
+    <p>
+        <img src="images/circulo.png" width=100 alt="eq1">
+    </p>
+</div>
+
 
 4. Cuente cuántos puntos cumplen con la condición anterior.
 5. Calcule una aproximación de π utilizando:
 
-\pi\approx4\left(\frac{puntos\ dentro}{N}\right)
+<div align="center">
+    <p>
+        <img src="images/approx.png" width=200 alt="eq2">
+    </p>
+</div>
 
 6. Investigue y utilice el módulo `math` para obtener el valor real de π.
-7. Calcule el error porcentual de cada aproximación utilizando:
-
-error=\frac{|\pi_{real}-\pi_{aproximado}|}{\pi_{real}}\times100
-
+7. Calcule el error porcentual de cada aproximación:
 8. Muestre en la terminal:
 
    * el valor de `N`,
@@ -47,7 +53,7 @@ Una vez calculadas todas las aproximaciones:
 
   * El eje `X` represente la cantidad de puntos.
   * El eje `Y` represente las aproximaciones de π.
-* Utilice escala logarítmica en el eje `X` con `plt.xscale(log)`.
+* Utilice escala logarítmica en el eje `X` con `plt.xscale("log")`.
 * Agregue:
 
   * título,
@@ -73,7 +79,7 @@ Gráfico:
 
 <div align="center">
     <p>
-        <img src="pi.png" alt="resultado">
+        <img src="images/pi.png" alt="resultado">
     </p>
 </div>
 
