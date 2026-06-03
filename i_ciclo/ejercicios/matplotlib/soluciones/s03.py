@@ -10,8 +10,8 @@ with open(archivo, "r") as f:
     for linea in texto:
         numeros = linea.split()
 
-        x.append(int(numeros[0]))
-        y.append(int(numeros[1]))
+        x.append(float(numeros[0]))
+        y.append(float(numeros[1]))
 
 plt.plot(x, y)
 plt.show()
