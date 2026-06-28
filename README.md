@@ -17,7 +17,8 @@ Curso de Programación 11º Colegio Científico de los Santos
 - [Recorridos](i_ciclo/ejercicios/recorridos/)
 - [NumPy](i_ciclo/ejercicios/numpy/)
 - [MatPlotLib](i_ciclo/ejercicios/matplotlib/)
-- [I Exámen Recomendados](i_ciclo/ejercicios/i_examen_recomendados/)
+- [I Examen Recomendados](i_ciclo/ejercicios/i_examen_recomendados/)
+- [II Examen Recomendados](i_ciclo/ejercicios/ii_examen_recomendados/)
 
 ### Tareas
 - [Tarea 1](i_ciclo/tareas/1/)
@@ -25,3 +26,4 @@ Curso de Programación 11º Colegio Científico de los Santos
 
 ### Exámenes
 - [I Examen](i_ciclo/exámenes/1/)
+- [I Examen](i_ciclo/exámenes/2/)
