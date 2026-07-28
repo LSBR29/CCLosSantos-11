@@ -33,7 +33,7 @@ Curso de Programación 11º Colegio Científico de los Santos
 - [01 - Sintaxis C++](ii_ciclo/material/01.%20sintaxis%20c++.md)
 
 ### Proyectos
-- [Proyecto 1](ii_ciclo/proyectos/01/)
+- [Proyecto 1](ii_ciclo/proyectos/1/)
 
 ### Exámenes
 - [I Examen](ii_ciclo/exámenes/1/)
