@@ -1,8 +1,10 @@
-#include <iostream>
-#include <vector>
-#include <string>
+#include <iostream>     // Imprimir y pedir datos
+#include <vector>       // Para tener vectores que usamos para guardar películas
+#include <string>       // Para manejar string
+#include <fstream>      // Para leer archivos
+#include <sstream>      // string stream : Para manejar strings
 
-using namespace std;
+using namespace std;    // Para evitar errores
 
 // Prototipos
 void mostrarMenu();
@@ -15,7 +17,6 @@ void mostrarEstadisticas();
 int buscarCodigo(int codigo);
 int leerEntero();
 
-// Estructuras
 struct Pelicula {
     int codigo;
     string nombre;
@@ -174,11 +175,15 @@ void modificarPelicula() {
     cout << "Nuevo genero: ";
     getline(cin, peliculas[posicion].genero);
 
+    cout << "Nueva duracion: ";
+    cin >> peliculas[posicion].duracion;
     while (peliculas[posicion].duracion <= 0) {
         cout << "Nueva duracion: ";
         cin >> peliculas[posicion].duracion;
     }
 
+    cout << "Nueva calificacion: ";
+    cin >> peliculas[posicion].calificacion;
     while (peliculas[posicion].calificacion < 0 || peliculas[posicion].calificacion > 10) {
         cout << "Nueva calificacion: ";
         cin >> peliculas[posicion].calificacion;
