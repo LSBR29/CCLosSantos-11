@@ -32,6 +32,7 @@ Curso de Programación 11º Colegio Científico de los Santos
 ### Material
 - [01 - Sintaxis C++](ii_ciclo/material/01.%20sintaxis%20c++.md)
 - [02 - Archivos C++](ii_ciclo/material/02.%20archivos%20c++.md)
+- [03 - Estructuras y Rendimiento C++](ii_ciclo/material/03.%20estructuras%20y%20rendimiento%20c++.md)
 
 ### Proyectos
 - [Proyecto 1](ii_ciclo/proyectos/1/)
