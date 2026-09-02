@@ -37,6 +37,7 @@ Curso de Programación 11º Colegio Científico de los Santos
 ### Proyectos
 - [Proyecto 1](ii_ciclo/proyectos/1/)
 - [Proyecto 2](ii_ciclo/proyectos/2/)
+- [Proyecto 3](ii_ciclo/proyectos/3/)
 
 ### Exámenes
 - [I Examen](ii_ciclo/exámenes/1/)
