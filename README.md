@@ -42,5 +42,3 @@ Curso de Programación 11º Colegio Científico de los Santos
 
 ### Exámenes
 - [I Examen](ii_ciclo/exámenes/1/)
-
-Prueba
