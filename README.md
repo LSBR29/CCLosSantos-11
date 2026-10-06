@@ -42,5 +42,8 @@ Curso de Programación 11º Colegio Científico de los Santos
 - [Proyecto 4](ii_ciclo/proyectos/4/)
 - [Proyecto 5](ii_ciclo/proyectos/5/)
 
+### Ejercicios
+- [Examen Recomendados](ii_ciclo/ejercicios/examen_recomendados/)
+
 ### Exámenes
 - [I Examen](ii_ciclo/exámenes/1/)
